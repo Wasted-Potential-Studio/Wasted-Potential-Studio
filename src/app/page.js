@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import Landing from '/Users/rohit/Wasted-Potential-Studio/src/components/Landing'
-import Header from '/Users/rohit/Wasted-Potential-Studio/src/components/Header'
+import Landing from '../components/Landing'
+import Header from '../components/Header'
 
 
 import * as THREE from 'three';

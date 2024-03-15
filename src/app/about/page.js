@@ -2,7 +2,7 @@
 import React, { Suspense } from "react";
 import { Provider, atom, useAtom } from "jotai";
 import { a, useSpring } from "@react-spring/web";
-import Header from '.../components/Header';
+import Header from '../Header';
 import styled, { createGlobalStyle } from "styled-components";
 
 // Import Inter font

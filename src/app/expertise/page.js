@@ -1,10 +1,10 @@
 'use client';
 import styles from './page.module.scss'
 import { useState } from 'react';
-import Project from ".../components/project"
-import Showcase from ".../components/Showcase"
-import Modal from ".../components/modal"
-import Header from ".../components/Header"
+import Project from "../project"
+import Showcase from "../Showcase"
+import Modal from "../modal"
+import Header from "../Header"
 
 
 export default function About() {

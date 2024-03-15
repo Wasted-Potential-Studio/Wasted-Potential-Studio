@@ -99,9 +99,16 @@ function Typography() {
   const shared = { font: '/Inter-Regular.woff', letterSpacing: -0.1, color: 'black' };
   return (
     <>
-      <Text children="Wasted" anchorX="left" position={[-width / 2.5, -height / 10, 12]} {...shared} />
-      <Text children="Potential" anchorX="right" position={[width / 2.5, -height * 2, 12]} {...shared} />
-      <Text children="Studio" position={[0, -height * 4.624, 12]} {...shared} />
+      <Text anchorX="left" position={[-width / 2.5, -height / 10, 12]} {...shared}>
+        Wasted
+      </Text>
+      <Text anchorX="right" position={[width / 2.5, -height * 2, 12]} {...shared}>
+        Potential
+      </Text>
+      <Text position={[0, -height * 4.624, 12]} {...shared}>
+        Studio
+      </Text>
     </>
   );
 }
+

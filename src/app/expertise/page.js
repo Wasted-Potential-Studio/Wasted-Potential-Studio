@@ -1,10 +1,10 @@
 'use client';
 import styles from './page.module.scss'
 import { useState } from 'react';
-import Project from "/Users/rohit/wps/src/components/project"
-import Showcase from "/Users/rohit/wps/src/components/Showcase"
-import Modal from "/Users/rohit/wps/src/components/modal"
-import Header from "/Users/rohit/wps/src/components/Header"
+import Project from "/Users/rohit/Wasted-Potential-Studio/src/components/project"
+import Showcase from "/Users/rohit/Wasted-Potential-Studio/src/components/Showcase"
+import Modal from "/Users/rohit/Wasted-Potential-Studio/src/components/modal"
+import Header from "/Users/rohit/Wasted-Potential-Studio/src/components/Header"
 
 
 export default function About() {

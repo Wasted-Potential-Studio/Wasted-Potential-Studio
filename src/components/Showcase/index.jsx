@@ -4,7 +4,7 @@ import styles from './page.module.scss'
 import Image from 'next/image';
 import Lenis from '@studio-freight/lenis'
 import { useTransform, useScroll, motion } from 'framer-motion';
-import Header from "/Users/rohit/wps/src/components/Header"
+import Header from "/Users/rohit/Wasted-Potential-Studio/src/components/Header"
 
 const images = [
   "1.jpg",

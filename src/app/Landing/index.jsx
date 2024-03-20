@@ -13,6 +13,7 @@ export default function App() {
           <Lens>
             <Scroll>
               <Typography />
+              <Footer/>
               <Images />
             </Scroll>
             <Scroll html>
@@ -112,5 +113,63 @@ function Typography() {
   );
 }
 
-
+function Footer() {
+  const state = useThree();
+  const { width, height } = state.viewport.getCurrentViewport(state.camera, [0, 0, 12]);
+  const shared = { font: '/Inter-Regular.woff', letterSpacing: -0.05, color: 'white', };
+  const linkStyle = { ...shared, marginTop: '0.05' }; // Adjust spacing between links
+  return (
+      <>
+          <Text anchorX="left" position={[-width / 2.3, -height * 5.09, 12]} fontSize={0.05} {...linkStyle} >
+              
+          </Text>
+          <Text href='/about' anchorX="left" position={[-width / 2.3, -height * 5.03, 12]} fontSize={0.05} {...linkStyle}  >
+              
+          </Text>
+          <Text anchorX="left" position={[-width / 2.3, -height * 4.97, 12]} fontSize={0.05} {...linkStyle}>
+              
+          </Text>
+          <Text anchorX="left" position={[-width / 2.3, -height * 4.91, 12]} fontSize={0.05} {...linkStyle} >
+              
+          </Text>
+          <Text style={{ position: 'absolute', top: '250vh', left: '9vw' }} anchorX="left"  fontSize={0.05}  {...linkStyle} >
+              
+          </Text>
+          
+          <Text anchorX="left" position={[-width / 5, -height * 5.09, 12]} fontSize={0.05} fontWeight={600} {...shared}>
+              
+          </Text>
+          <Text anchorX="left" position={[-width / 5, -height * 5.03, 12]} fontSize={0.05} {...linkStyle}>
+              
+          </Text>
+          <Text anchorX="left" position={[-width / 5, -height * 4.97, 12]} fontSize={0.05} {...linkStyle}>
+              
+          </Text>
+          <Text anchorX="left" position={[-width / 5, -height * 4.91, 12]} fontSize={0.05} {...linkStyle}>
+              
+          </Text>
+          <Text anchorX="left" position={[-width / 5, -height * 4.85, 12]} fontSize={0.05}  {...linkStyle}>
+              
+          </Text>
+          <Text anchorX="right" position={[width / 2.3, -height * 5.09, 12]} fontSize={0.05} fontWeight={600} {...shared}>
+              
+          </Text>
+          <Text anchorX="right" position={[width / 2.3, -height * 5.03, 12]} fontSize={0.05} {...linkStyle}>
+              
+          </Text>
+          <Text anchorX="right" position={[width / 2.3, -height * 4.97, 12]} fontSize={0.05} {...linkStyle}>
+              
+          </Text>
+          <Text anchorX="right" position={[width / 2.3, -height * 4.91, 12]} fontSize={0.05} {...linkStyle}>
+              
+          </Text>
+          <Text anchorX="right" position={[width / 2.3, -height * 4.85, 12]} fontSize={0.05}  {...linkStyle}>
+              
+          </Text>
+          <Text anchorX="left" position={[-width / 11.1, -height * 5.22, 12]} fontSize={0.03} {...shared}>
+              @ 2024 Wasted Potential Studio. All rights reserved.
+          </Text>
+      </>
+  );
+}
 

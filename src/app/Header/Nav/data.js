@@ -11,10 +11,7 @@ export const links = [
         title: "Expertise",
         href: "/expertise"
     },
-    {
-        title: "Careers",
-        href: "/career"
-    },
+
     {
         title: "Contact",
         href: "/contact"

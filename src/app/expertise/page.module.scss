@@ -1,13 +1,10 @@
 .main{
-    display: flex;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+
+    height: 150vh;
   }
   .body {
-    width: 1000px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100vh;
     flex-direction: column;
+    padding: 100px 100px 100px 100px;
   }

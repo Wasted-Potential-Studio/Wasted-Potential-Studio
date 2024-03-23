@@ -26,7 +26,7 @@ export default function App() {
         <a href="/expertise" style={{ position: 'absolute', top: '260vh', left: '6.4vw', fontSize: '1.5em' }}>Projects</a>
         <a href="/contact" style={{ position: 'absolute', top: '266vh', left: '6.4vw', fontSize: '1.5em' }}>Contacts</a>
         <a href="/" style={{ position: 'absolute', top: '272vh', left: '6.4vw', fontSize: '1.5em' }}>LearnMore</a>
-        <a href="/contact" style={{ position: 'absolute', top: '248vh', right: '-63.4vw', fontSize: '1.5em' }}>Contact</a>
+        <a href="https://www.linkedin.com/company/wasted-potential-studio/about/?viewAsMember=true" style={{ position: 'absolute', top: '248vh', right: '-63.4vw', fontSize: '1.5em' }}>LinkedIn</a>
         <a href="https://twitter.com/wastedpotentiaX" style={{ position: 'absolute', top: '254vh', right: '-63.4vw', fontSize: '1.5em' }}>Twitter</a>
         <a href="https://www.instagram.com/wastedpotentialstudio/" style={{ position: 'absolute', top: '260vh', right: '-63.4vw', fontSize: '1.5em' }}>Instagram</a>
         <a href="" style={{ position: 'absolute', top: '266vh', right: '-63.4vw', fontSize: '1.5em' }}>Facebook</a>

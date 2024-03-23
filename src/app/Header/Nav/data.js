@@ -25,14 +25,14 @@ export const footerLinks = [
     },
     {
         title: "LinkedIn",
-        href: "/"
+        href: "https://www.linkedin.com/company/wasted-potential-studio/about/?viewAsMember=true"
     },
     {
         title: "Instagram",
-        href: "/"
+        href: "https://www.instagram.com/wastedpotentialstudio/"
     },
     {
         title: "Twitter",
-        href: "/"
+        href: "https://twitter.com/wastedpotentiaX"
     }
 ]

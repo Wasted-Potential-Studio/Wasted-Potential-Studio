@@ -19,20 +19,19 @@ export const links = [
 ]
 
 export const footerLinks = [
+
     {
-        title: "Facebook",
-        href: "/"
+        title: "Instagram",
+        href: "https://www.instagram.com/wastedpotentialstudio/"
+    },
+
+    {
+        title: "Twitter",
+        href: "https://twitter.com/wastedpotentiaX"
     },
     {
         title: "LinkedIn",
         href: "https://www.linkedin.com/company/wasted-potential-studio/about/?viewAsMember=true"
     },
-    {
-        title: "Instagram",
-        href: "https://www.instagram.com/wastedpotentialstudio/"
-    },
-    {
-        title: "Twitter",
-        href: "https://twitter.com/wastedpotentiaX"
-    }
+
 ]

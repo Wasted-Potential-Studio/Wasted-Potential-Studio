@@ -42,6 +42,8 @@ export default function index({Component, pageProps, router}) {
                 footerLinks.map( (link, i) => {
                     const { title, href } = link;
                     return (
+                        <div key={`b_${i}`} className={styles.linkContainer}>
+                          <Link href={href}> 
                         <motion.a 
                             variants={slideIn}
                             custom={i} 
@@ -52,6 +54,8 @@ export default function index({Component, pageProps, router}) {
                         >
                             {title}
                         </motion.a>
+                        </Link> 
+                        </div>
                     )
                 })
             }

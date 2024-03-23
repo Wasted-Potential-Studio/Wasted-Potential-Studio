@@ -106,15 +106,15 @@ function Overlay() {
   return (
     <div style={{ position: 'fixed', top: 0, left: 0, right: 0 }}>
       <a href="/" style={{ position: 'absolute', top: 40, left: 40, fontSize: '15px' }}>wasted potential —</a>
-      <a href="/" style={{ position: 'absolute', top: '75vh', left: '16.7vw', fontSize: '1.5em' }}>About</a>
-      <a href="/" style={{ position: 'absolute', top: '80vh', left: '16.7vw', fontSize: '1.5em' }}>Feature</a>
-      <a href="/" style={{ position: 'absolute', top: '85vh', left: '16.7vw', fontSize: '1.5em' }}>Projects</a>
+      <a href="/about" style={{ position: 'absolute', top: '75vh', left: '16.7vw', fontSize: '1.5em' }}>About</a>
+      <a href="/expertise" style={{ position: 'absolute', top: '80vh', left: '16.7vw', fontSize: '1.5em' }}>Feature</a>
+      <a href="/expertise" style={{ position: 'absolute', top: '85vh', left: '16.7vw', fontSize: '1.5em' }}>Projects</a>
       <a href="/" style={{ position: 'absolute', top: '90vh', left: '16.7vw', fontSize: '1.5em' }}>LearnMore</a>
-      <a href="/" style={{ position: 'absolute', top: '75vh', right: '16.5vw', fontSize: '1.5em' }}>Twitter</a>
-      <a href="/" style={{ position: 'absolute', top: '80vh', right: '16.5vw', fontSize: '1.5em' }}>Instagram</a>
+      <a href="https://twitter.com/wastedpotentiaX" style={{ position: 'absolute', top: '75vh', right: '16.5vw', fontSize: '1.5em' }}>Twitter</a>
+      <a href="https://www.instagram.com/wastedpotentialstudio/" style={{ position: 'absolute', top: '80vh', right: '16.5vw', fontSize: '1.5em' }}>Instagram</a>
       <a href="/" style={{ position: 'absolute', top: '85vh', right: '16.5vw', fontSize: '1.5em' }}>Facebook</a>
-      <a href="/" style={{ position: 'absolute', top: '90vh', right: '16.5vw', fontSize: '1.5em' }}>Showcase</a>
-      <a href="" style={{ position: 'absolute', top: '96vh', right: '40.5vw', fontSize: '0.78em' }}>@ 2024 Wasted Potential Studio. All rights reserved.</a>
+      <a href="/Showcase" style={{ position: 'absolute', top: '90vh', right: '16.5vw', fontSize: '1.5em' }}>Showcase</a>
+      <a href="/" style={{ position: 'absolute', top: '96vh', right: '40.5vw', fontSize: '0.78em' }}>@ 2024 Wasted Potential Studio. All rights reserved.</a>
 
       <footer>
         <div style={{ position: 'absolute', left: '16.5vw', top: '20vh', display: 'flex', alignItems: 'center', justifyContent:'space-evenly'}}>

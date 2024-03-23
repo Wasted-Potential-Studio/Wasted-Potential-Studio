@@ -67,16 +67,16 @@ export default function Showcase() {
       </div>
       <div className={styles.spacer}>
         <a href="/About" style={{ position: 'absolute', top: '333vh', left: '6.6vw', fontSize: '1.5em' }}>About</a>
-        <a href="/" style={{ position: 'absolute', top: '339vh', left: '6.4vw', fontSize: '1.5em' }}>Feature</a>
-        <a href="/" style={{ position: 'absolute', top: '345vh', left: '6.4vw', fontSize: '1.5em' }}>Projects</a>
+        <a href="/expertise" style={{ position: 'absolute', top: '339vh', left: '6.4vw', fontSize: '1.5em' }}>Feature</a>
+        <a href="/expertise" style={{ position: 'absolute', top: '345vh', left: '6.4vw', fontSize: '1.5em' }}>Projects</a>
         <a href="/contact" style={{ position: 'absolute', top: '351vh', left: '6.4vw', fontSize: '1.5em' }}>Contacts</a>
         <a href="/" style={{ position: 'absolute', top: '357vh', left: '6.4vw', fontSize: '1.5em' }}>LearnMore</a>
         <a href="/contact" style={{ position: 'absolute', top: '333vh', right: '36.5vw', fontSize: '1.5em' }}>Contact</a>
-        <a href="/" style={{ position: 'absolute', top: '339vh', right: '36.5vw', fontSize: '1.5em' }}>Twitter</a>
-        <a href="/" style={{ position: 'absolute', top: '345vh', right: '36.5vw', fontSize: '1.5em' }}>Instagram</a>
+        <a href="https://twitter.com/wastedpotentiaX" style={{ position: 'absolute', top: '339vh', right: '36.5vw', fontSize: '1.5em' }}>Twitter</a>
+        <a href="https://www.instagram.com/wastedpotentialstudio/" style={{ position: 'absolute', top: '345vh', right: '36.5vw', fontSize: '1.5em' }}>Instagram</a>
         <a href="/" style={{ position: 'absolute', top: '351vh', right: '36.5vw', fontSize: '1.5em' }}>Facebook</a>
         <a href="/Showcase" style={{ position: 'absolute', top: '357vh', right: '36.5vw', fontSize: '1.5em' }}>Showcase</a>
-        <a href="" style={{ position: 'absolute', top: '371vh', right: '41vw', fontSize: '0.75em' }}>@ 2024 Wasted Potential Studio. All rights reserved.</a>
+        <a href="/" style={{ position: 'absolute', top: '371vh', right: '41vw', fontSize: '0.75em' }}>@ 2024 Wasted Potential Studio. All rights reserved.</a>
       </div>
       <footer>
         <div style={{ position: 'absolute', top: '320.5vh', left: '71.5vw', display: 'flex', alignItems: 'center', justifyContent:'space-evenly'}}>

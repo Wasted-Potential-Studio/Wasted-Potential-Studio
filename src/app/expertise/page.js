@@ -9,19 +9,21 @@ import Header from "../Header"
 export default function About() {
     const projects = [
         {
-          title: "100 days of Poetry",
+          title: "100 days of Art",
           src: "c2montreal.png",
-          color: "#000000"
+          color: "#000000",
+          href: "https://100-days-of-art.vercel.app/"
         },
         {
-          title: "What's Water",
+          title: "Creative Writer Portfolio",
           src: "officestudio.png",
           color: "#8C8C8C"
         },
         {
-          title: "Stitch | Winne | Freda",
+          title: "Post-Irony",
           src: "locomotive.png",
-          color: "#EFE8D3"
+          color: "#EFE8D3",
+          
         },
         {
           title: "Digital Love",

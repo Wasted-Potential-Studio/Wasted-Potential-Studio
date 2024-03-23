@@ -17,21 +17,20 @@ export default function App() {
               <Typography/>
               <Typography2/>
               <Typography3/>
-
               <Footer/>
               <Images/>
             </Scroll>
             <Scroll html>
-        <a href="/" style={{ position: 'absolute', top: '248vh', left: '6.6vw', fontSize: '1.5em' }}>About</a>
-        <a href="/" style={{ position: 'absolute', top: '254vh', left: '6.4vw', fontSize: '1.5em' }}>Feature</a>
-        <a href="/" style={{ position: 'absolute', top: '260vh', left: '6.4vw', fontSize: '1.5em' }}>Projects</a>
-        <a href="/" style={{ position: 'absolute', top: '266vh', left: '6.4vw', fontSize: '1.5em' }}>Contacts</a>
+        <a href="/about" style={{ position: 'absolute', top: '248vh', left: '6.6vw', fontSize: '1.5em' }}>About</a>
+        <a href="/expertise" style={{ position: 'absolute', top: '254vh', left: '6.4vw', fontSize: '1.5em' }}>Feature</a>
+        <a href="/expertise" style={{ position: 'absolute', top: '260vh', left: '6.4vw', fontSize: '1.5em' }}>Projects</a>
+        <a href="/contact" style={{ position: 'absolute', top: '266vh', left: '6.4vw', fontSize: '1.5em' }}>Contacts</a>
         <a href="/" style={{ position: 'absolute', top: '272vh', left: '6.4vw', fontSize: '1.5em' }}>LearnMore</a>
-        <a href="/" style={{ position: 'absolute', top: '248vh', right: '-63.4vw', fontSize: '1.5em' }}>Contact</a>
-        <a href="/" style={{ position: 'absolute', top: '254vh', right: '-63.4vw', fontSize: '1.5em' }}>Twitter</a>
-        <a href="/" style={{ position: 'absolute', top: '260vh', right: '-63.4vw', fontSize: '1.5em' }}>Instagram</a>
-        <a href="/" style={{ position: 'absolute', top: '266vh', right: '-63.4vw', fontSize: '1.5em' }}>Facebook</a>
-        <a href="/" style={{ position: 'absolute', top: '272vh', right: '-63.4vw', fontSize: '1.5em' }}>Showcase</a>
+        <a href="/contact" style={{ position: 'absolute', top: '248vh', right: '-63.4vw', fontSize: '1.5em' }}>Contact</a>
+        <a href="https://twitter.com/wastedpotentiaX" style={{ position: 'absolute', top: '254vh', right: '-63.4vw', fontSize: '1.5em' }}>Twitter</a>
+        <a href="https://www.instagram.com/wastedpotentialstudio/" style={{ position: 'absolute', top: '260vh', right: '-63.4vw', fontSize: '1.5em' }}>Instagram</a>
+        <a href="" style={{ position: 'absolute', top: '266vh', right: '-63.4vw', fontSize: '1.5em' }}>Facebook</a>
+        <a href="/Showcase" style={{ position: 'absolute', top: '272vh', right: '-63.4vw', fontSize: '1.5em' }}>Showcase</a>
 
         <footer>
         <div style={{ position: 'absolute', right: '-95.4vw', height: '521vh', display: 'flex', alignItems: 'center', justifyContent:'space-evenly'}}>
@@ -51,8 +50,6 @@ export default function App() {
             </div>
         </div>
         </footer>
-        
-        
             </Scroll>
             <Preload />
           </Lens>
@@ -146,12 +143,10 @@ function Images() {
     const { width, height } = state.viewport.getCurrentViewport(state.camera, [0, 0, 12]);
     return (
       <group>
-        <Image position={[-width / 70000, -height * 1.4, 12]} scale={[width, height]} url="/images/img7.jpg" alt="img" />
+        <Image position={[-width / 70000, -height * 1.4, 12]} scale={[width, height]} url="/images/trip5.jpg" alt="img" />
         <Image anchorX='left' position={[-width / 3, -height * 2.74, 12]}url="/images/IMG_1168.jpeg" alt="img"/>
         <Image anchorX='left' position={[width / 280, -height * 2.74, 12]}url="/images/IMG_2621.JPG" alt="img"/>
         <Image anchorX='left' position={[width / 3, -height * 2.74, 12]}url="/images/Surabhi_Personal Photo.jpg" alt="img"/>
-        <Image anchorX='left' position={[width / 3, -height * 2.74, 12]}url="/images/Surabhi_Personal Photo.jpg" alt="img"/>
-        
       </group>
     );
   }
@@ -187,9 +182,8 @@ function Typography2() {
         Surabhi
         </Text>
         <Text anchorX="left" position={[width / 4.9, -height * 3.08, 12]} {...shared}>
-        Writer & Marketing Head
+        Brand Director
         </Text>
-        
       </>
     );
   }

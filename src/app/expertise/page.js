@@ -10,7 +10,7 @@ export default function About() {
     const projects = [
         { title: "100 days of Art", src: "c2montreal.png", color: "#000000", href: "https://100-days-of-art.vercel.app/" },
         { title: "Creative Writer Portfolio", src: "officestudio.png", color: "#8C8C8C" },
-        { title: "Post-Irony", src: "locomotive.png", color: "#EFE8D3" },
+        { title: "Artist Merch Store", src: "locomotive.png", color: "#EFE8D3" },
         { title: "Digital Love", src: "silencio.png", color: "#706D63" }
     ];
 

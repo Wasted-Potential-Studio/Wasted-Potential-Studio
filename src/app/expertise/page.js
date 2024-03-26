@@ -25,8 +25,9 @@ export default function About() {
             </div>
             <Modal modal={modal} projects={projects} />
             <Header />
-            <Overlay />
             <Showcase />
+            <Overlay />
+            
         </main>
     );
 }

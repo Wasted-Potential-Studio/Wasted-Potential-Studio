@@ -7,49 +7,20 @@ import { easing } from 'maath';
 import Header from '../Header';
 import { color } from 'framer-motion';
 
+
+
 export default function App() {
   return (
-    <div style={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden' }}>
+    <div style={{ width: '100vw', height: '100vh' }}>
       <Canvas camera={{ position: [0, 0, 20], fov: 15 }}>
         <ScrollControls damping={0.2} pages={2.90} distance={0.2}>
           <Lens>
             <Scroll >
               <Typography/>
-              <Typography2/>
-              <Typography3/>
-              <Footer/>
               <Images/>
             </Scroll>
             <Scroll html>
-        <a href="/about" style={{ position: 'absolute', top: '248vh', left: '6.6vw', fontSize: '1.5em' }}>About</a>
-        <a href="/expertise" style={{ position: 'absolute', top: '254vh', left: '6.4vw', fontSize: '1.5em' }}>Feature</a>
-        <a href="/expertise" style={{ position: 'absolute', top: '260vh', left: '6.4vw', fontSize: '1.5em' }}>Projects</a>
-        <a href="/contact" style={{ position: 'absolute', top: '266vh', left: '6.4vw', fontSize: '1.5em' }}>Contacts</a>
-        <a href="/" style={{ position: 'absolute', top: '272vh', left: '6.4vw', fontSize: '1.5em' }}>LearnMore</a>
-        <a href="https://www.linkedin.com/company/wasted-potential-studio/about/?viewAsMember=true" style={{ position: 'absolute', top: '248vh', right: '-63.4vw', fontSize: '1.5em' }}>LinkedIn</a>
-        <a href="https://twitter.com/wastedpotentiaX" style={{ position: 'absolute', top: '254vh', right: '-63.4vw', fontSize: '1.5em' }}>Twitter</a>
-        <a href="https://www.instagram.com/wastedpotentialstudio/" style={{ position: 'absolute', top: '260vh', right: '-63.4vw', fontSize: '1.5em' }}>Instagram</a>
-        <a href="" style={{ position: 'absolute', top: '266vh', right: '-63.4vw', fontSize: '1.5em' }}>Facebook</a>
-        <a href="/Showcase" style={{ position: 'absolute', top: '272vh', right: '-63.4vw', fontSize: '1.5em' }}>Showcase</a>
-
-        <footer>
-        <div style={{ position: 'absolute', right: '-95.4vw', height: '521vh', display: 'flex', alignItems: 'center', justifyContent:'space-evenly'}}>
-            <form action="https://api.web3forms.com/submit" method="POST" class="contact-left" style={{display:'flex', flexDirection: 'column', alignItems:'start', gap:'20px'}}>
-              <div class="contact-left-title">
-                <h2  style={{fontWeight:'600', fontSize:'40px', marginBottom:'5px'}}>Get in touch</h2>
-                <hr style={{border:'none', width:'120px', height:'5px', backgroundColor:'black', borderRadius:'10px', marginBottom:'20px'}}></hr>
-              </div>
-              <input type="hidden" name="access_key" value="7993c76d-d551-45d9-8dac-556a52e98c56"></input>
-              <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required style={{width:'400px', height:'50px', border:'none', outline:'none', paddingLeft:'25px', fontWeight:'500', borderRadius:'50px'}}/>
-              <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required style={{width:'400px', height:'50px', border:'none', outline:'none', paddingLeft:'25px', fontWeight:'500', borderRadius:'50px'}}/>
-              <textarea name="message" placeholder="Your Message" class="contact-inputs" required style={{width:'400px', height:'140px', border:'none', outline:'none', paddingTop:'15px' ,paddingLeft:'25px', fontWeight:'500', borderRadius:'20px'}}></textarea>
-              <button type="submit" style={{display:'flex', alignItems:'center', padding:'15px 30px', fontSize:'16px', gap:'10px', border:'none', borderRadius:'50px', background:'linear-gradient(270deg,#ff994f,#fa6d86'}}>Submit </button>
-            </form>
-            <div class="contact-right">
-              
-            </div>
-        </div>
-        </footer>
+            <Footer/>
             </Scroll>
             <Preload />
           </Lens>
@@ -106,32 +77,342 @@ function Overlay() {
     );
   }
 
+
+function Footer() {
+  const [isInstagramHovered, setIsInstagramHovered] = useState(false);
+  const [isTumblrHovered, setIsTumblrHovered] = useState(false);
+  const [isVimeoHovered, setIsVimeoHovered] = useState(false);
+  const [isBehanceHovered, setIsBehanceHovered] = useState(false);
+  const [isDribbleHovered, setIsDribbleHovered] = useState(false);
+  const [isMediumHovered, setIsMediumHovered] = useState(false);
+  const [isTwitterHovered, setIsTwitterHovered] = useState(false);
+  const [isPhoneHovered, setIsPhoneHovered] = useState(false);
+  const [isEmailHovered, setIsEmailHovered] = useState(false);
+  const [isHomeHovered, setIsHomeHovered] = useState(false);
+  const [isAboutHovered, setIsAboutHovered] = useState(false);
+  const [isWorkHovered, setIsWorkHovered] = useState(false);
+  const [isContactHovered, setIsContactHovered] = useState(false);
+
+  return(
+    
+    <div style={{ position: 'absolute', top: '-10vh'}}>
+    <div style={{fontSize: '1.125em' }}>
+    <a href="" style={{ position: 'absolute', top: '238vh', left: '4vw', opacity:0.3}}>Check&nbsp;out&nbsp;some of&nbsp;our&nbsp;award&nbsp;winning projects</a>
+    <a href="" style={{ position: 'absolute', top: '238vh', left: '23vw', opacity:0.3}}>Or&nbsp;just&nbsp;take&nbsp;a&nbsp;look&nbsp;around. Our&nbsp;Work&nbsp;is&nbsp;usually&nbsp;a good&nbsp;start</a>
+    <a
+        href=""
+        style={{
+          position: "absolute",
+          top: "265vh",
+          left: "23vw",
+          transition: "opacity 0.1s",
+          opacity: isHomeHovered ? 0.5 : 1,
+          cursor: "pointer",
+        }}
+        onMouseEnter={() => setIsHomeHovered(true)}
+        onMouseLeave={() => setIsHomeHovered(false)}
+      >
+        Home
+      </a>
+      <a
+        href=""
+        style={{
+          position: "absolute",
+          top: "267.5vh",
+          left: "23vw",
+          transition: "opacity 0.1s",
+          opacity: isAboutHovered ? 0.5 : 1,
+          cursor: "pointer",
+        }}
+        onMouseEnter={() => setIsAboutHovered(true)}
+        onMouseLeave={() => setIsAboutHovered(false)}
+      >
+        About
+      </a>
+      <a
+        href=""
+        style={{
+          position: "absolute",
+          top: "270vh",
+          left: "23vw",
+          transition: "opacity 0.1s",
+          opacity: isWorkHovered ? 0.5 : 1,
+          cursor: "pointer",
+        }}
+        onMouseEnter={() => setIsWorkHovered(true)}
+        onMouseLeave={() => setIsWorkHovered(false)}
+      >
+        Work
+      </a>
+      <a
+        href=""
+        style={{
+          position: "absolute",
+          top: "272.5vh",
+          left: "23vw",
+          transition: "opacity 0.1s",
+          opacity: isContactHovered ? 0.5 : 1,
+          cursor: "pointer",
+        }}
+        onMouseEnter={() => setIsContactHovered(true)}
+        onMouseLeave={() => setIsContactHovered(false)}
+      >
+        Contact
+      </a>
+    <a href="" style={{ position: 'absolute', top: '238vh', left: '47vw', opacity:0.3}}>Studio&nbsp;hours&nbsp;are from&nbsp;9:00&nbsp;to&nbsp;5:00 IST, Mon&nbsp;to&nbsp;Sat</a>
+    <a href="" style={{ position: 'absolute', top: '252vh', left: '47vw', opacity:0.3}}>General&nbsp;questions</a>
+    <a
+        href="tel:+918956887367"
+        style={{
+          position: "absolute",
+          top: "255vh",
+          left: "47vw",
+          transition: "opacity 0.1s",
+          opacity: isPhoneHovered ? 0.5 : 1,
+          cursor: "pointer",
+        }}
+        onMouseEnter={() => setIsPhoneHovered(true)}
+        onMouseLeave={() => setIsPhoneHovered(false)}
+      >(M)&nbsp;+91&nbsp;895&nbsp;688&nbsp;7367
+      
+      </a>
+     
+      <a
+        href="mailto:wastedpotentialstudio@gmail.com"
+        style={{
+          position: "absolute",
+          top: "257.5vh",
+          left: "47vw",
+          transition: "opacity 0.1s",
+          opacity: isEmailHovered ? 0.5 : 1,
+          cursor: "pointer",
+        }}
+        onMouseEnter={() => setIsEmailHovered(true)}
+        onMouseLeave={() => setIsEmailHovered(false)}
+      >(E)&nbsp;wastedpotentialstudio@gmail.com
+      </a>
+    <a
+        href=""
+        style={{
+          position: "absolute",
+          top: "265vh",
+          left: "47vw",
+          transition: "opacity 0.1s",
+          opacity: isTwitterHovered ? 0.5 : 1,
+          cursor: "pointer",
+        }}
+        onMouseEnter={() => setIsTwitterHovered(true)}
+        onMouseLeave={() => setIsTwitterHovered(false)}
+      >
+        Twitter
+      </a>
+    <a
+        href=""
+        style={{
+          position: "absolute",
+          top: "267.5vh",
+          left: "47vw",
+          transition: "opacity 0.1s",
+          opacity: isInstagramHovered ? 0.5 : 1,
+          cursor: "pointer",
+        }}
+        onMouseEnter={() => setIsInstagramHovered(true)}
+        onMouseLeave={() => setIsInstagramHovered(false)}
+      >
+        Instagram
+      </a>
+      <a
+        href=""
+        style={{
+          position: "absolute",
+          top: "270vh",
+          left: "47vw",
+          transition: "opacity 0.1s",
+          opacity: isTumblrHovered ? 0.5 : 1,
+          cursor: "pointer",
+        }}
+        onMouseEnter={() => setIsTumblrHovered(true)}
+        onMouseLeave={() => setIsTumblrHovered(false)}
+      >
+        Tumblr
+      </a>
+      <a
+        href=""
+        style={{
+          position: "absolute",
+          top: "272.5vh",
+          left: "47vw",
+          transition: "opacity 0.1s",
+          opacity: isVimeoHovered ? 0.5 : 1,
+          cursor: "pointer",
+        }}
+        onMouseEnter={() => setIsVimeoHovered(true)}
+        onMouseLeave={() => setIsVimeoHovered(false)}
+      >
+        Vimeo
+      </a>
+      <a
+        href=""
+        style={{
+          position: "absolute",
+          top: "275vh",
+          left: "47vw",
+          transition: "opacity 0.1s",
+          opacity: isBehanceHovered ? 0.5 : 1,
+          cursor: "pointer",
+        }}
+        onMouseEnter={() => setIsBehanceHovered(true)}
+        onMouseLeave={() => setIsBehanceHovered(false)}
+      >
+        Behance
+      </a>
+      <a
+        href=""
+        style={{
+          position: "absolute",
+          top: "277.5vh",
+          left: "47vw",
+          transition: "opacity 0.1s",
+          opacity: isDribbleHovered ? 0.5 : 1,
+          cursor: "pointer",
+        }}
+        onMouseEnter={() => setIsDribbleHovered(true)}
+        onMouseLeave={() => setIsDribbleHovered(false)}
+      >
+        Dribble
+      </a>
+      <a
+        href=""
+        style={{
+          position: "absolute",
+          top: "280vh",
+          left: "47vw",
+          transition: "opacity 0.1s",
+          opacity: isMediumHovered ? 0.5 : 1,
+          cursor: "pointer",
+        }}
+        onMouseEnter={() => setIsMediumHovered(true)}
+        onMouseLeave={() => setIsMediumHovered(false)}
+      >
+        Medium
+      </a>
+    </div>
+
+    <footer>
+    <div style={{ position: 'absolute', right: '-95.4vw', height: '521vh', display: 'flex', alignItems: 'center', justifyContent:'space-evenly'}}>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left" style={{display:'flex', flexDirection: 'column', alignItems:'start', gap:'20px'}}>
+          <div class="contact-left-title">
+            <h2  style={{fontWeight:'600', fontSize:'40px', marginBottom:'5px'}}>Get in touch</h2>
+            <hr style={{border:'none', width:'120px', height:'5px', backgroundColor:'black', borderRadius:'10px', marginBottom:'20px'}}></hr>
+          </div>
+          <input type="hidden" name="access_key" value="7993c76d-d551-45d9-8dac-556a52e98c56"></input>
+          <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required style={{width:'400px', height:'50px', border:'none', outline:'none', paddingLeft:'25px', fontWeight:'500', borderRadius:'50px'}}/>
+          <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required style={{width:'400px', height:'50px', border:'none', outline:'none', paddingLeft:'25px', fontWeight:'500', borderRadius:'50px'}}/>
+          <textarea name="message" placeholder="Your Message" class="contact-inputs" required style={{width:'400px', height:'140px', border:'none', outline:'none', paddingTop:'15px' ,paddingLeft:'25px', fontWeight:'500', borderRadius:'20px'}}></textarea>
+          <button type="submit" style={{display:'flex', alignItems:'center', padding:'15px 30px', fontSize:'16px', gap:'10px', border:'none', borderRadius:'50px', background:'linear-gradient(270deg,#ff994f,#fa6d86'}}>Submit </button>
+        </form>
+        <div class="contact-right">
+        </div>
+    </div>
+     
+    </footer>
+
+    </div>
+  )
+}
+
 function Typography() {
     const state = useThree();
     const { width, height } = state.viewport.getCurrentViewport(state.camera, [0, 0, 12]);
-    const shared = { font: '/Inter-Regular.woff', letterSpacing: -0.1, color: 'black' };
+    const shared = { font: '/Inter-Regular.woff' };
     return (
       <>
-        <Text anchorX="left" position={[-width / 2, -height * -0.20, 12]} {...shared}>
-          About
+        <Text anchorX="left" position={[-width / 2, -height * -0.20, 12]} {...shared} letterSpacing= "-0.1"  color= "black">
+        About
         </Text>
-        <Text anchorX="right" position={[width / 2.5, -height * 0.23, 12]} {...shared}>
+        <Text anchorX="right" position={[width / 2.5, -height * 0.23, 12]} {...shared} letterSpacing= "-0.1"  color= "black">
         ↓ Us
         </Text>
-      </>
-    );
-  }
-
-  function Typography3() {
-    const state = useThree();
-    const { width, height } = state.viewport.getCurrentViewport(state.camera, [0, 0, 12]);
-    const shared = { font: '/Inter-Regular.woff', letterSpacing: -0.1, color: 'black' };
-    return (
-      <>
-        <Text anchorX="left" position={[-width / 2, -height * 2.2, 12]} {...shared}>
-        </Text>
-        <Text anchorX="right" position={[width / 2.5, -height * 2.2, 12]} {...shared}>
+        <Text anchorX="right" position={[width / 2.5, -height * 2.2, 12]} {...shared} letterSpacing= "-0.1"  color= "black" >
          Team
+        </Text>
+        <Text anchorX="left" position={[-width / 2.1, -height * 0.70, 12]} {...shared} letterSpacing="-0.05" color='black' fontSize='0.10'>
+        WE ARE A CREATIVE STUDIO FOR ARTISTS BY ARTISTS
+        </Text>
+        <Text anchorX="left" position={[-width / 2.1, -height * 0.75, 12]} {...shared} letterSpacing="-0.05" color='black' fontSize='0.10'>
+        CREATING IMMERSIVE DIGITAL EXPERIENCES FOR BRANDS AND PEOPLE
+        </Text>
+        <Text anchorX="left" position={[-width / 2.15, -height * 3.02, 12]} {...shared} letterSpacing="-0.05" color='black' fontSize='0.10'>
+        Rohit
+        </Text>
+        <Text anchorX="left" position={[-width / 2.15, -height * 3.08, 12]} {...shared} letterSpacing="-0.05" color='black' fontSize='0.10'>
+        Creative Director
+        </Text>
+        <Text anchorX="left" position={[-width / 2.15, -height * 3.30, 12]} {...shared} letterSpacing="-0.05" color='black' fontSize='0.06'>
+        What we do
+        </Text>
+        <Text anchorX="left" position={[-width / 90, -height * 3.33, 12]} {...shared} letterSpacing="-0.05" color='black' fontSize='0.07'>
+        Experience
+        </Text>
+        <Text anchorX="left" position={[-width / 90, -height * 3.38, 12]} {...shared} letterSpacing="-0.05" color='gray' fontSize='0.05' >
+        Web design
+        </Text>
+        <Text anchorX="left" position={[-width / 90, -height * 3.415, 12]} {...shared} letterSpacing="-0.05" color='gray' fontSize='0.05' >
+        Front-end development
+        </Text>
+        <Text anchorX="left" position={[-width / 90, -height * 3.45, 12]} {...shared} letterSpacing="-0.05" color='gray' fontSize='0.05' >
+        Back-end development
+        </Text>
+        <Text anchorX="left" position={[-width / 90, -height * 3.485, 12]} {...shared} letterSpacing="-0.05" color='gray' fontSize='0.05' >
+        Art direction
+        </Text>
+        <Text anchorX="left" position={[-width / 90, -height * 3.52, 12]} {...shared} letterSpacing="-0.05" color='gray' fontSize='0.05' >
+        User Experience
+        </Text>
+        <Text anchorX="left" position={[-width / 90, -height * 3.555, 12]} {...shared} letterSpacing="-0.05" color='gray' fontSize='0.05' >
+        Concept development
+        </Text>
+        <Text anchorX="left" position={[-width / 90, -height * 3.59, 12]} {...shared} letterSpacing="-0.05" color='gray' fontSize='0.05' >
+        Brand development
+        </Text>
+        <Text anchorX="left" position={[-width / 90, -height * 3.625, 12]} {...shared} letterSpacing="-0.05" color='gray' fontSize='0.05' >
+        Brand identity
+        </Text>
+        <Text anchorX="left" position={[-width / 90, -height * 3.66, 12]} {...shared} letterSpacing="-0.05" color='gray' fontSize='0.05' >
+        ...
+        </Text>
+        
+        
+        <Text anchorX="left" position={[-width / 2.15, -height * 3.36, 12]} {...shared} letterSpacing="-0.05" color='black' fontSize='0.10'>
+        We work with artists and brands,
+        </Text>
+        <Text anchorX="left" position={[-width / 2.15, -height * 3.42, 12]} {...shared} letterSpacing="-0.05" color='black' fontSize='0.10'>
+        big or small, commercial or indie
+        </Text>
+        <Text anchorX="left" position={[-width / 2.15, -height * 3.48, 12]} {...shared} letterSpacing="-0.05" color='black' fontSize='0.10'>
+        to tell their stories through code
+        </Text>
+        <Text anchorX="left" position={[-width / 2.15, -height * 3.54, 12]} {...shared} letterSpacing="-0.05" color='black' fontSize='0.10'>
+        and creative design to give an
+        </Text>
+        <Text anchorX="left" position={[-width / 2.15, -height * 3.60, 12]} {...shared} letterSpacing="-0.05" color='black' fontSize='0.10'>
+        immersive web experience.
+        </Text>
+        
+        <Text anchorX="left" position={[-width / 7.8, -height * 3.02, 12]} {...shared} letterSpacing="-0.05" color='black' fontSize='0.10'>
+        Stitch
+        </Text>
+        <Text anchorX="left" position={[-width / 7.8, -height * 3.08, 12]} {...shared} letterSpacing="-0.05" color='black' fontSize='0.10'>
+        Recreational Officer
+        </Text>
+        <Text anchorX="left" position={[width / 4.9, -height * 3.02, 12]} {...shared} letterSpacing="-0.05" color='black' fontSize='0.10'>
+        Surabhi
+        </Text>
+        <Text anchorX="left" position={[width / 4.9, -height * 3.08, 12]} {...shared} letterSpacing="-0.05" color='black' fontSize='0.10'>
+        Brand Director
+        </Text>
+        <Text anchorX="left" position={[-width / 11.1, -height * 5.22, 12]} fontSize={0.03} {...shared} letterSpacing='-0.05' color= 'black'>
+                @ 2024 Wasted Potential Studio. All rights reserved.
         </Text>
       </>
     );
@@ -151,99 +432,6 @@ function Images() {
     );
   }
 
-function Typography2() {
-    const state = useThree();
-    const { width, height } = state.viewport.getCurrentViewport(state.camera, [0, 0, 12]);
-    const shared = { font: '/Inter-Regular.woff', letterSpacing: -0.05, color: 'black', fontSize:'0.10' };
-    return (
-      <>
-        <Text anchorX="left" position={[-width / 2.1, -height * 0.65, 12]} {...shared}>
-        
-        </Text>
-        <Text anchorX="left" position={[-width / 2.1, -height * 0.70, 12]} {...shared}>
-        WE ARE A CREATIVE STUDIO FOR ARTISTS BY ARTISTS
-        </Text>
-        <Text anchorX="left" position={[-width / 2.1, -height * 0.75, 12]} {...shared}>
-        CREATING IMMERSIVE DIGITAL EXPERIENCES FOR BRANDS AND PEOPLE
-        </Text>
-        <Text anchorX="left" position={[-width / 2.15, -height * 3.02, 12]} {...shared}>
-        Rohit
-        </Text>
-        <Text anchorX="left" position={[-width / 2.15, -height * 3.08, 12]} {...shared}>
-        Creative Director
-        </Text>
-        <Text anchorX="left" position={[-width / 7.8, -height * 3.02, 12]} {...shared}>
-        Stitch
-        </Text>
-        <Text anchorX="left" position={[-width / 7.8, -height * 3.08, 12]} {...shared}>
-        Recreational Officer
-        </Text>
-        <Text anchorX="left" position={[width / 4.9, -height * 3.02, 12]} {...shared}>
-        Surabhi
-        </Text>
-        <Text anchorX="left" position={[width / 4.9, -height * 3.08, 12]} {...shared}>
-        Brand Director
-        </Text>
-      </>
-    );
-  }
 
 
-function Footer() {
-    const state = useThree();
-    const { width, height } = state.viewport.getCurrentViewport(state.camera, [0, 0, 12]);
-    const shared = { font: '/Inter-Regular.woff', letterSpacing: -0.05, color: 'black', };
-    const linkStyle = { ...shared, marginTop: '0.05' }; // Adjust spacing between links
-    return (
-        <>
-            <Text anchorX="left" position={[-width / 2.3, -height * 5.09, 12]} fontSize={0.05} {...linkStyle} >
-                
-            </Text>
-            <Text href='/about' anchorX="left" position={[-width / 2.3, -height * 5.03, 12]} fontSize={0.05} {...linkStyle}  >
-                
-            </Text>
-            <Text anchorX="left" position={[-width / 2.3, -height * 4.97, 12]} fontSize={0.05} {...linkStyle}>
-                
-            </Text>
-            <Text anchorX="left" position={[-width / 2.3, -height * 4.91, 12]} fontSize={0.05} {...linkStyle} >
-                
-            </Text>
-            <Text style={{ position: 'absolute', top: '250vh', left: '9vw' }} anchorX="left"  fontSize={0.05}  {...linkStyle} >
-                
-            </Text>
-            <Text anchorX="left" position={[-width / 5, -height * 5.09, 12]} fontSize={0.05} fontWeight={600} {...shared}>
-                
-            </Text>
-            <Text anchorX="left" position={[-width / 5, -height * 5.03, 12]} fontSize={0.05} {...linkStyle}>
-                
-            </Text>
-            <Text anchorX="left" position={[-width / 5, -height * 4.97, 12]} fontSize={0.05} {...linkStyle}>
-                
-            </Text>
-            <Text anchorX="left" position={[-width / 5, -height * 4.91, 12]} fontSize={0.05} {...linkStyle}>
-                
-            </Text>
-            <Text anchorX="left" position={[-width / 5, -height * 4.85, 12]} fontSize={0.05}  {...linkStyle}>
-                
-            </Text>
-            <Text anchorX="right" position={[width / 2.3, -height * 5.09, 12]} fontSize={0.05} fontWeight={600} {...shared}>
-                
-            </Text>
-            <Text anchorX="right" position={[width / 2.3, -height * 5.03, 12]} fontSize={0.05} {...linkStyle}>
-                
-            </Text>
-            <Text anchorX="right" position={[width / 2.3, -height * 4.97, 12]} fontSize={0.05} {...linkStyle}>
-                
-            </Text>
-            <Text anchorX="right" position={[width / 2.3, -height * 4.91, 12]} fontSize={0.05} {...linkStyle}>
-                
-            </Text>
-            <Text anchorX="right" position={[width / 2.3, -height * 4.85, 12]} fontSize={0.05}  {...linkStyle}>
-                
-            </Text>
-            <Text anchorX="left" position={[-width / 11.1, -height * 5.22, 12]} fontSize={0.03} {...shared}>
-                @ 2024 Wasted Potential Studio. All rights reserved.
-            </Text>
-        </>
-    );
-}
+

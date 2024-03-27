@@ -173,7 +173,7 @@ function Footer() {
     <div style={{fontSize: '1.125em'}}>
     <a href="" style={{ position: 'absolute', top: '238vh', left: '4vw', opacity:[isMobile ? 0.0 : 0.3]}}>Check&nbsp;out&nbsp;some of&nbsp;our&nbsp;award&nbsp;winning projects</a>
     <a href="" style={{ position: 'absolute', top: '238vh', left: '23vw', opacity:[isMobile ? 0.0 : 0.3]}}>Or&nbsp;just&nbsp;take&nbsp;a&nbsp;look&nbsp;around. Our&nbsp;Work&nbsp;is&nbsp;usually&nbsp;a good&nbsp;start</a>
-    <group style={{position: 'absolute',top:[isMobile ? "-430vw" : "0vw"], left:[isMobile ? '30vw' :'0vw'] }}>
+    <group style={{position: 'absolute',top:[isMobile ? "-420vw" : "0vw"], left:[isMobile ? '30vw' :'0vw'] }}>
     <a
         href=""
         style={{
@@ -235,7 +235,7 @@ function Footer() {
         Contact
       </a>
       </group>
-    <group style={{position:"absolute", top:[isMobile ? "-430vw" : "0vw"], left: [isMobile ? "-45vw" : "0vw"]}}>
+    <group style={{position:"absolute", top:[isMobile ? "-420vw" : "0vw"], left: [isMobile ? "-45vw" : "0vw"]}}>
     <a href="" style={{ position: 'absolute', top: '238vh', left: '47vw', opacity:0.3}}>Studio&nbsp;hours&nbsp;are from&nbsp;9:00&nbsp;to&nbsp;5:00 IST, Mon&nbsp;to&nbsp;Sat</a>
     <a href="" style={{ position: 'absolute', top: '252vh', left: '47vw', opacity:0.3}}>General&nbsp;questions</a>
     <a

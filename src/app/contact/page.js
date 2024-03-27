@@ -104,7 +104,7 @@ function PostTitle() {
 }
 
 function Overlay() {
-  const isMobile = window.innerWidth < 768;
+
   return (
     <div style={{ position: 'fixed', top: 0, left: 0, right: 0 }}>
       <a href="/" style={{ position: 'absolute', top: 40, left: 40, fontSize: '15px' }}>wasted potential —</a>
@@ -129,7 +129,7 @@ function Footer() {
   const [isAboutHovered, setIsAboutHovered] = useState(false);
   const [isWorkHovered, setIsWorkHovered] = useState(false);
   const [isContactHovered, setIsContactHovered] = useState(false);
-  const isMobile = window.innerWidth < 768;
+
 
   return(
     

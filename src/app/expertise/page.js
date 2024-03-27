@@ -33,7 +33,7 @@ export default function About() {
 }
 
 function Overlay() {
-    const isMobile = window.innerWidth < 768;
+
     return (
         <div style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none', width: '100%', height: '100%' }}>
             <a href="/" style={{ position: 'absolute', bottom: 40, left: 40, fontSize: '13px' }}> <br /> </a>

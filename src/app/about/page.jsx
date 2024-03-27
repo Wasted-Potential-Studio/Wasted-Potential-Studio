@@ -38,7 +38,7 @@ function Lens({ children, damping = 0.14, ...props }) {
   const buffer = useFBO();
   const viewport = useThree((state) => state.viewport);
   const [scene] = useState(() => new THREE.Scene());
-  const isMobile = window.innerWidth < 768;
+
   useFrame((state, delta) => {
     const viewport = state.viewport.getCurrentViewport(state.camera, [0, 0, 15]);
     easing.damp3(
@@ -69,7 +69,7 @@ function Lens({ children, damping = 0.14, ...props }) {
 }
 
 function Overlay() {
-  const isMobile = window.innerWidth < 768;
+
     return (
       <div style={{ position: 'absolute', top: 0, left: 0, pointerEvents: 'none', width: '100%', height: '100%' }}>
         <a href="/" style={{ position: 'absolute', bottom: 40, left: 40, fontSize: '13px' }}>  <br /> </a>
@@ -94,7 +94,8 @@ function Footer() {
   const [isAboutHovered, setIsAboutHovered] = useState(false);
   const [isWorkHovered, setIsWorkHovered] = useState(false);
   const [isContactHovered, setIsContactHovered] = useState(false);
-  const isMobile = window.innerWidth < 768;
+
+  
 
   return(
     
@@ -328,7 +329,7 @@ function Typography() {
     const state = useThree();
     const { width, height } = state.viewport.getCurrentViewport(state.camera, [0, 0, 12]);
     const shared = { font: '/Inter-Regular.woff' };
-    const isMobile = window.innerWidth < 768;
+
     return (
       <>
         <Text anchorX="left" position={[-width / 2, -height * -0.20, 12]} {...shared} letterSpacing= "-0.1"  color= "black">
@@ -426,7 +427,7 @@ function Typography() {
 function Images() {
     const state = useThree();
     const { width, height } = state.viewport.getCurrentViewport(state.camera, [0, 0, 12]);
-    const isMobile = window.innerWidth < 768;
+
     return (
       <group>
         <Image position={[-width / 70000, -height * 1.4, 12]} scale={[width, height]} url="/images/trip5.jpg" alt="img" />

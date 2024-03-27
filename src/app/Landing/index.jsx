@@ -1,18 +1,27 @@
 'use client';
 import React from 'react';
 import * as THREE from 'three';
-import { useRef, useState } from 'react';
+import { useRef, useEffect,  useState } from 'react';
 import { Canvas, createPortal, useFrame, useThree } from '@react-three/fiber';
 import { useFBO, useGLTF, useScroll, Text, Image, Scroll, Preload, ScrollControls, MeshTransmissionMaterial } from '@react-three/drei';
 import { easing } from 'maath';
-import Media from 'react-media';
+
 
 export default function App() {
-  const isMobile = window.innerWidth < 768;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if window is defined (i.e., running in the browser environment)
+    if (typeof window !== 'undefined') {
+      // Access window.innerWidth only in the browser environment
+      setIsMobile(window.innerWidth < 768);
+    }
+  }, []);
+
   return (
     <div style={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden' }}>
       <Canvas camera={{ position: [0, 0, 20], fov: 15 }}>
-        <ScrollControls damping={0.2} pages={isMobile ? 2 : 4} distance={0.2}>
+        <ScrollControls damping={0.2} pages={[isMobile ? 2: 4]} distance={0.2}>
           <Lens>
             <Scroll>
               <Typography />
@@ -34,6 +43,8 @@ export default function App() {
     </div>
   );
 }
+
+
 
 function Lens({ children, damping = 0.15, ...props }) {
   const ref = useRef();
@@ -130,7 +141,6 @@ function Typography2() {
   const state = useThree();
   const { width, height } = state.viewport.getCurrentViewport(state.camera, [0, 0, 12]);
   const shared = { font: '/Inter-Regular.woff', letterSpacing: -0.05, color: 'black', };
-  const linkStyle = { ...shared, marginTop: '0.05' }; // Adjust spacing between links
   const isMobile = window.innerWidth < 768;
   return (
       <>

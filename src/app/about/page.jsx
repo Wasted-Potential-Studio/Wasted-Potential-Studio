@@ -412,7 +412,7 @@ function Typography() {
         Brand Consultant
         </Text>
         <Text anchorX="left" position={[-width / 11.1, -height * 5.22, 12]} fontSize={0.03} {...shared} letterSpacing='-0.05' color= 'black'>
-                @ 2024 Wasted Potential Studio. All rights reserved.
+        @ 2024 Wasted Potential Studio. All rights reserved.
         </Text>
       </>
     );

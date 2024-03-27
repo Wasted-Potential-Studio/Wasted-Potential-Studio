@@ -1,15 +1,18 @@
 'use client';
+import React from 'react';
 import * as THREE from 'three';
 import { useRef, useState } from 'react';
 import { Canvas, createPortal, useFrame, useThree } from '@react-three/fiber';
 import { useFBO, useGLTF, useScroll, Text, Image, Scroll, Preload, ScrollControls, MeshTransmissionMaterial } from '@react-three/drei';
 import { easing } from 'maath';
+import Media from 'react-media';
 
 export default function App() {
+  const isMobile = window.innerWidth < 768;
   return (
     <div style={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden' }}>
       <Canvas camera={{ position: [0, 0, 20], fov: 15 }}>
-        <ScrollControls damping={0.2} pages={4} distance={0.2}>
+        <ScrollControls damping={0.2} pages={isMobile ? 2 : 4} distance={0.2}>
           <Lens>
             <Scroll>
               <Typography />
@@ -73,6 +76,7 @@ function Images() {
   const group = useRef();
   const data = useScroll();
   const { width, height } = useThree((state) => state.viewport);
+  const isMobile = window.innerWidth < 768;
   useFrame(() => {
     group.current.children[0].material.zoom = 1 + data.range(0, 1 / 3) / 3;
     group.current.children[1].material.zoom = 1 + data.range(0, 1 / 3) / 3;
@@ -83,33 +87,41 @@ function Images() {
     group.current.children[6].material.zoom = 1 + (1 - data.range(2 / 3, 1 / 3)) / 3;
   });
   return (
+    <>
+    <group >
     <group ref={group}>
-      <Image position={[0, -height * 2 - height / 4, 0]} scale={[width, height / 1.1, 1]} url="/images/img7.jpg" alt="img" />
-      <Image position={[-2, 0, 0]} scale={[4, height, 1]} url="/images/img1.jpg" alt="img" />
-      <Image position={[2, 0, 3]} scale={3} url="/images/img6.jpg" alt="img"/>
-      <Image position={[-2.05, -height, 6]} scale={[1, 3, 1]} url="/images/trip2.jpg" alt="img"/>
-      <Image position={[-0.6, -height, 9]} scale={[1, 2, 1]} url="/images/img3.jpg"alt="img" />
-      <Image position={[0.75, -height, 10.5]} scale={1.5} url="/images/trip7.jpg" alt="img"/>
-      <Image position={[0, -height * 1.5, 7.5]} scale={[1.5, 3, 1]} url="/images/trip8.jpg" alt="img" />
+      <Image position-x={0} position-y={isMobile ? 0 : -12} position-z={isMobile ? 0 :0} scale={[width, height, 0]} url="/images/img7.jpg" alt="img" />
+      <Image position-x={isMobile ? 0 :-2} position-y={0} position-z={0} scale={[4, height, 1]} url="/images/img1.jpg" alt="img" />
+      <Image position-x={isMobile ? 3 : 2} position-y={0} position-z={3} scale={3} url="/images/img6.jpg" alt="img"/>
+      <Image position={[ isMobile ? 10: -2.05, isMobile ? -height: -height, isMobile ? 8 :6]} scale={[1, 2, 1]} url="/images/trip2.jpg" alt="img"/>
+      <Image position={[isMobile ? 0 : -0.6, isMobile ? -height/1.6 : -height, 9]} scale={[1, 2, 1]} url="/images/img3.jpg"alt="img" />
+      <Image position={[isMobile ? 2 : 0.75, -height, 10.5]} scale={1.5} url="/images/trip7.jpg" alt="img"/>
+      <Image position={[isMobile ? 2: 0, -height * 1.5, 7.5]} scale={[1.5, 3, 1]} url="/images/trip8.jpg" alt="img" />
     </group>
+    </group>
+    </>
   );
 }
 
 function Typography() {
   const state = useThree();
-  const { width, height } = state.viewport.getCurrentViewport(state.camera, [0, 0, 12]); // Corrected typo
+  const { width, height } = state.viewport.getCurrentViewport(state.camera, [0, 0, 12]); 
   const shared = { font: '/Inter-Regular.woff', letterSpacing: -0.1, color: 'black' };
+  const isMobile = window.innerWidth < 768;
+
   return (
     <>
-      <Text anchorX="left" position={[-width / 2.5, -height / 10, 12]} {...shared}>
+    <group>
+      <Text anchorX="left" fontSize={isMobile ? 0.7 :1} position={[ isMobile ? -0.9 : -width / 2.5, isMobile ? 1 : -height / 10, isMobile ? 0: 12]} {...shared}>
         Wasted
       </Text>
-      <Text anchorX="right" position={[width / 2.30, -height * 2, 12]} {...shared}>
+      <Text anchorX="right" fontSize={isMobile ? 0.7 :1} position={[ isMobile ? 1.1 : width / 2.30, isMobile ? 0 : -height * 2, isMobile? 0: 12]} {...shared}>
         Potential
       </Text>
-      <Text position={[0, -height * 4.624, 12]} {...shared}>
+      <Text fontSize={isMobile ? 0.7 :1}  position={[ isMobile ? 0.1 : 0, isMobile ? -1 : -height * 4.624, isMobile ? 0 :12]} {...shared}>
         Studio
       </Text>
+    </group>
     </>
   );
 }
@@ -119,55 +131,10 @@ function Typography2() {
   const { width, height } = state.viewport.getCurrentViewport(state.camera, [0, 0, 12]);
   const shared = { font: '/Inter-Regular.woff', letterSpacing: -0.05, color: 'black', };
   const linkStyle = { ...shared, marginTop: '0.05' }; // Adjust spacing between links
+  const isMobile = window.innerWidth < 768;
   return (
       <>
-          <Text anchorX="left" position={[-width / 2.3, -height * 5.09, 12]} fontSize={0.05} {...linkStyle} >
-              
-          </Text>
-          <Text href='/about' anchorX="left" position={[-width / 2.3, -height * 5.03, 12]} fontSize={0.05} {...linkStyle}  >
-              
-          </Text>
-          <Text anchorX="left" position={[-width / 2.3, -height * 4.97, 12]} fontSize={0.05} {...linkStyle}>
-              
-          </Text>
-          <Text anchorX="left" position={[-width / 2.3, -height * 4.91, 12]} fontSize={0.05} {...linkStyle} >
-              
-          </Text>
-          <Text style={{ position: 'absolute', top: '250vh', left: '9vw' }} anchorX="left"  fontSize={0.05}  {...linkStyle} >
-              
-          </Text>
-          
-          <Text anchorX="left" position={[-width / 5, -height * 5.09, 12]} fontSize={0.05} fontWeight={600} {...shared}>
-              
-          </Text>
-          <Text anchorX="left" position={[-width / 5, -height * 5.03, 12]} fontSize={0.05} {...linkStyle}>
-              
-          </Text>
-          <Text anchorX="left" position={[-width / 5, -height * 4.97, 12]} fontSize={0.05} {...linkStyle}>
-              
-          </Text>
-          <Text anchorX="left" position={[-width / 5, -height * 4.91, 12]} fontSize={0.05} {...linkStyle}>
-              
-          </Text>
-          <Text anchorX="left" position={[-width / 5, -height * 4.85, 12]} fontSize={0.05}  {...linkStyle}>
-              
-          </Text>
-          <Text anchorX="right" position={[width / 2.3, -height * 5.09, 12]} fontSize={0.05} fontWeight={600} {...shared}>
-              
-          </Text>
-          <Text anchorX="right" position={[width / 2.3, -height * 5.03, 12]} fontSize={0.05} {...linkStyle}>
-              
-          </Text>
-          <Text anchorX="right" position={[width / 2.3, -height * 4.97, 12]} fontSize={0.05} {...linkStyle}>
-              
-          </Text>
-          <Text anchorX="right" position={[width / 2.3, -height * 4.91, 12]} fontSize={0.05} {...linkStyle}>
-              
-          </Text>
-          <Text anchorX="right" position={[width / 2.3, -height * 4.85, 12]} fontSize={0.05}  {...linkStyle}>
-              
-          </Text>
-          <Text anchorX="left" position={[-width / 11.1, -height * 7.97, 12]} fontSize={0.03} {...shared}>
+          <Text anchorX="left" position={[isMobile ? -width/3:-width / 11.1, isMobile ? -height * 2.97 : -height * 7.97, 12]} fontSize={0.03} {...shared}>
               @ 2024 Wasted Potential Studio. All rights reserved.
           </Text>
       </>
@@ -188,19 +155,21 @@ function Footer() {
   const [isAboutHovered, setIsAboutHovered] = useState(false);
   const [isWorkHovered, setIsWorkHovered] = useState(false);
   const [isContactHovered, setIsContactHovered] = useState(false);
-
+  const isMobile = window.innerWidth < 768;
+  
   return(
-    
-    <div style={{ position: 'absolute', top: '100vh'}}>
-    <div style={{fontSize: '1.125em' }}>
-    <a href="" style={{ position: 'absolute', top: '238vh', left: '4vw', opacity:0.3}}>Check&nbsp;out&nbsp;some of&nbsp;our&nbsp;award&nbsp;winning projects</a>
-    <a href="" style={{ position: 'absolute', top: '238vh', left: '23vw', opacity:0.3}}>Or&nbsp;just&nbsp;take&nbsp;a&nbsp;look&nbsp;around. Our&nbsp;Work&nbsp;is&nbsp;usually&nbsp;a good&nbsp;start</a>
+    <>
+    <div style={{ position: 'absolute', top: '100vh', display: 'flex', alignItems: 'center', justifyContent:'space-evenly' }}>
+    <div style={{fontSize: '1.125em'}}>
+    <a href="" style={{ position: 'absolute', top: '238vh', left: '4vw', opacity:[isMobile ? 0.0 : 0.3]}}>Check&nbsp;out&nbsp;some of&nbsp;our&nbsp;award&nbsp;winning projects</a>
+    <a href="" style={{ position: 'absolute', top: '238vh', left: '23vw', opacity:[isMobile ? 0.0 : 0.3]}}>Or&nbsp;just&nbsp;take&nbsp;a&nbsp;look&nbsp;around. Our&nbsp;Work&nbsp;is&nbsp;usually&nbsp;a good&nbsp;start</a>
+    <group style={{position: 'absolute',top:[isMobile ? "-430vw" : "0vw"], left:[isMobile ? '30vw' :'0vw'] }}>
     <a
         href=""
         style={{
           position: "absolute",
-          top: "265vh",
-          left: "23vw",
+          top: ['265vh'],
+          left: ["23vw"],
           transition: "opacity 0.1s",
           opacity: isHomeHovered ? 0.5 : 1,
           cursor: "pointer",
@@ -214,7 +183,7 @@ function Footer() {
         href=""
         style={{
           position: "absolute",
-          top: "267.5vh",
+          top: ["267.5vh"],
           left: "23vw",
           transition: "opacity 0.1s",
           opacity: isAboutHovered ? 0.5 : 1,
@@ -229,7 +198,7 @@ function Footer() {
         href=""
         style={{
           position: "absolute",
-          top: "270vh",
+          top: ["270vh"],
           left: "23vw",
           transition: "opacity 0.1s",
           opacity: isWorkHovered ? 0.5 : 1,
@@ -255,6 +224,8 @@ function Footer() {
       >
         Contact
       </a>
+      </group>
+    <group style={{position:"absolute", top:[isMobile ? "-430vw" : "0vw"], left: [isMobile ? "-45vw" : "0vw"]}}>
     <a href="" style={{ position: 'absolute', top: '238vh', left: '47vw', opacity:0.3}}>Studio&nbsp;hours&nbsp;are from&nbsp;9:00&nbsp;to&nbsp;5:00 IST, Mon&nbsp;to&nbsp;Sat</a>
     <a href="" style={{ position: 'absolute', top: '252vh', left: '47vw', opacity:0.3}}>General&nbsp;questions</a>
     <a
@@ -392,10 +363,12 @@ function Footer() {
       >
         Medium
       </a>
+      </group> 
     </div>
+    
 
     <footer>
-    <div style={{ position: 'absolute', right: '-95.4vw', height: '521vh', display: 'flex', alignItems: 'center', justifyContent:'space-evenly'}}>
+    <div style={{ position: 'absolute', right: [isMobile ? "0vw" : "-95.4vw"], height: [isMobile ? "420vh" : "521vh"], display: 'flex', alignItems: 'center', justifyContent:'space-evenly'}}>
         <form action="https://api.web3forms.com/submit" method="POST" class="contact-left" style={{display:'flex', flexDirection: 'column', alignItems:'start', gap:'20px'}}>
           <div class="contact-left-title">
             <h2  style={{fontWeight:'600', fontSize:'40px', marginBottom:'5px'}}>Get in touch</h2>
@@ -414,5 +387,6 @@ function Footer() {
     </footer>
 
     </div>
+    </>
   )
 }

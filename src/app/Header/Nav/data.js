@@ -30,8 +30,12 @@ export const footerLinks = [
         href: "https://twitter.com/wastedpotentiaX"
     },
     {
-        title: "LinkedIn",
-        href: "https://www.linkedin.com/company/wasted-potential-studio/about/?viewAsMember=true"
+        title: "Behance",
+        href: ""
+    },
+    {
+        title: "Vimeo",
+        href: ""
     },
 
 ]

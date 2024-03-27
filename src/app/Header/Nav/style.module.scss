@@ -22,8 +22,8 @@
     .footer{
         display: flex;
         flex-wrap: wrap;
-        flex-direction: row;
-        gap: 40px;
+        flex-direction: column;
+        gap: 10px;
         a{
             width: 50%;
             margin-top: 5px;

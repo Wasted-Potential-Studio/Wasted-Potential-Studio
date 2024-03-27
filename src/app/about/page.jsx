@@ -409,7 +409,7 @@ function Typography() {
         Surabhi
         </Text>
         <Text anchorX="left" position={[width / 4.9, -height * 3.08, 12]} {...shared} letterSpacing="-0.05" color='black' fontSize='0.10'>
-        Brand Director
+        Brand Consultant
         </Text>
         <Text anchorX="left" position={[-width / 11.1, -height * 5.22, 12]} fontSize={0.03} {...shared} letterSpacing='-0.05' color= 'black'>
                 @ 2024 Wasted Potential Studio. All rights reserved.

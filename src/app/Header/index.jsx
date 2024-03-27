@@ -5,7 +5,6 @@ import Button from './Button';
 import styles from './style.module.scss';
 import Nav from './Nav';
 
-const isMobile = window.innerWidth < 768;
 
 const menu = {
     

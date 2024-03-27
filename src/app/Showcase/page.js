@@ -106,6 +106,7 @@ function Footer() {
   const [isAboutHovered, setIsAboutHovered] = useState(false);
   const [isWorkHovered, setIsWorkHovered] = useState(false);
   const [isContactHovered, setIsContactHovered] = useState(false);
+  const isMobile = window.innerWidth < 768;
 
   return(
     

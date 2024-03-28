@@ -104,7 +104,7 @@ function Footer() {
     <a href="" style={{ position: 'absolute', top: '238vh', left: '4vw', opacity:0.3}}>Check&nbsp;out&nbsp;some of&nbsp;our&nbsp;award&nbsp;winning projects</a>
     <a href="" style={{ position: 'absolute', top: '238vh', left: '23vw', opacity:0.3}}>Or&nbsp;just&nbsp;take&nbsp;a&nbsp;look&nbsp;around. Our&nbsp;Work&nbsp;is&nbsp;usually&nbsp;a good&nbsp;start</a>
     <a
-        href=""
+        href="/"
         style={{
           position: "absolute",
           top: "265vh",
@@ -119,7 +119,7 @@ function Footer() {
         Home
       </a>
       <a
-        href=""
+        href="/about"
         style={{
           position: "absolute",
           top: "267.5vh",
@@ -134,7 +134,7 @@ function Footer() {
         About
       </a>
       <a
-        href=""
+        href="/expertise"
         style={{
           position: "absolute",
           top: "270vh",
@@ -149,7 +149,7 @@ function Footer() {
         Work
       </a>
       <a
-        href=""
+        href="/contact"
         style={{
           position: "absolute",
           top: "272.5vh",
@@ -196,7 +196,7 @@ function Footer() {
       >(E)&nbsp;wastedpotentialstudio@gmail.com
       </a>
     <a
-        href=""
+        href="https://twitter.com/wastedpotentiaX"
         style={{
           position: "absolute",
           top: "265vh",
@@ -211,7 +211,7 @@ function Footer() {
         Twitter
       </a>
     <a
-        href=""
+        href="https://www.instagram.com/wastedpotentialstudio/"
         style={{
           position: "absolute",
           top: "267.5vh",
@@ -226,7 +226,7 @@ function Footer() {
         Instagram
       </a>
       <a
-        href=""
+        href="https://www.tumblr.com/"
         style={{
           position: "absolute",
           top: "270vh",
@@ -241,7 +241,7 @@ function Footer() {
         Tumblr
       </a>
       <a
-        href=""
+        href="https://vimeo.com/watch"
         style={{
           position: "absolute",
           top: "272.5vh",
@@ -256,7 +256,7 @@ function Footer() {
         Vimeo
       </a>
       <a
-        href=""
+        href="https://www.behance.net/"
         style={{
           position: "absolute",
           top: "275vh",
@@ -271,7 +271,7 @@ function Footer() {
         Behance
       </a>
       <a
-        href=""
+        href="https://dribbble.com/"
         style={{
           position: "absolute",
           top: "277.5vh",
@@ -286,7 +286,7 @@ function Footer() {
         Dribble
       </a>
       <a
-        href=""
+        href="https://medium.com/"
         style={{
           position: "absolute",
           top: "280vh",
